@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    .box {
+      border: 5px;
+      box-sizing: border-box;
+      width: 20.5%;
+      height: 200px;
+      margin: 2%;
+      display: inline-block;
+    }
+
+    .triangle {
+      display: none;
+      width: 0; 
+      height: 0; 
+      border-left: 130px solid transparent;  /* left arrow slant */
+      border-right: 130px solid transparent; /* right arrow slant */
+      border-bottom: 130px solid black; /* bottom, add background color here */
+      font-size: 0;
+      line-height: 0;
+    }
+
+    .green {
+      background-color: green;
+    }
+
+    .red {
+      background-color: red;
+    }
+
+    .blue {
+      background-color: #336699;
+    }
+
+    .black {
+      background-color: black;
+    }
+
+    .purple {
+      background-color: purple;
+    }
+
+    .yellow {
+      background-color: #cccc00;
+      transition: all 1s;
+    }
+
+    .orange {
+      background-color: #EB9100;
+      position: relative;
+    }
+
+    .grey {
+      background-color: #D3D3D3;
+      transition: all 1s;
+    }
+
+    .picture, .wordz {
+      display: none;
+    }
+
+    .wordz {
+      position: absolute;
+      top: 50%;
+      left:50%;
+      transform: translate(-50%, -100%);
+      -webkit-transform: translate(-50%, -100%);
+    }
+
+    .polaroid {
+      display: none;
+      background-color: white;
+      padding: 3.65em 3.5em .75em;
+      box-shadow: .3125em .3125em .625em black;
+    }
+
+    .polaroid img {
+      width: auto;
+      height: 100%;
+    }
+
+    .box:hover {
+      border: 3px solid #336699;
+      border-radius: 48%;
+      background-color: transparent;
+    }
+
+    .black:hover,
+    .purple:hover,
+    .green:hover, 
+    .red:hover,
+    .yellow:hover,
+    .orange:hover,
+    .grey:hover {
+      border: none;
+      border-radius: 0;
+    }
+
+    .green:hover .triangle, 
+    .red:hover .triangle,
+    .black:hover .picture,
+    .purple:hover .polaroid,
+    .orange:hover .wordz {
+      display: block;
+    }
+
+    .yellow:hover {
+      -webkit-transform: translateX(40px) rotate(10deg) skewY(10deg) scale(0.25);
+      transform: translateX(40px) rotate(10deg) skewY(10deg) scale(0.25);
+    }
+
+    .grey:hover {
+      animation: spinning 1s linear infinite;
+      -webkit-animation: spinning 1s linear infinite;
+      background-color: #D3D3D3
+    }
+
+    @keyframes spinning {
+      0% {
+        -webkit-transform: rotate(0deg)
+      }
+      100% {
+        -webkit-transform: rotate(360deg)
+      }
+    }
+
+    @-webkit-keyframes spinning {
+      0% {
+        -webkit-transform: rotate(0deg)
+      }
+      100% {
+        -webkit-transform: rotate(360deg)
+      }
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    p {
+      display: block;
+      font-family: Helvetica;
+      font-size: 30px;
+    }
+
+    div:nth-child(3n) {
+      background-color: #336699;
+    }
+
+    /*breakpoints*/
+    @media (max-width:777px) {
+      .box {
+        width:42%;
+      }
+    }
+
+    @media (max-width:452px) {
+      .box {
+        width: 98%;
+      }
+    }
+
+  </style>
+  <body>
+    <!-- 1 -->
+    <div class='box green'>
+      <div class='triangle'></div>
+    </div>
+    <!-- 2 -->
+    <div class='box yellow'></div>
+    <!-- 3 -->
+    <div class='box'></div>
+    <!-- 4 -->
+    <div class='box orange'>
+      <p class='wordz'>
+        <a href='http://rubycorns.club'>rubycorns.club</a>
+      </p>
+    </div>    <!-- 5 -->
+    <div class='box black'>
+      <div class='picture'>
+        <img src='done.gif'>
+      </div>
+    </div>
+    <!-- 6 -->
+    <div class='box'></div>
+    <!-- 7 -->
+    <div class='box purple'>
+      <div class='polaroid'>
+        <img src='rubycorns.png'>
+      </div>
+    </div>
+    <!-- 8 -->
+    <div class='box red'>
+      <div class='triangle'></div>
+    </div>
+    <!-- 9 -->
+    <div class='box'></div>
+    <!-- 10 -->
+    <div class='box orange'>
+      <p class='wordz'>#rubycornsrule</p>
+    </div>
+    <!-- 11 -->
+    <div class='box yellow'></div>
+    <!-- 12 -->
+    <div class='box'></div>
+    <!-- 13 -->
+    <div class='box grey'></div>
+    <!-- 14 -->
+    <div class='box black'>
+      <div class='picture'>
+        <img src='done.gif'>
+      </div>
+    </div>
+    <!-- 15 -->
+    <div class='box'></div>
+    <!-- 16 -->
+    <div class='box orange'>
+      <p class='wordz'>
+        <a href='https://www.twitter.com/rubycorns'>@rubycorns</a>
+      </p>
+    </div>
+  </body>
+</html>
